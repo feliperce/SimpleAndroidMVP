@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context="mobi.feliperce.simplemvp.view.MainActivity">
+    tools:context="mobi.feliperce.simplemvp.view.LoginActivity">
 
     <EditText
         android:layout_width="match_parent"
