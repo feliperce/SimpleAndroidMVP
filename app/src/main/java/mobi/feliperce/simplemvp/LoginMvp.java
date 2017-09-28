@@ -22,5 +22,6 @@ public interface LoginMvp {
 
     interface Presenter {
         void login(String user, String password);
+        void setView(LoginMvp.View view);
     }
 }

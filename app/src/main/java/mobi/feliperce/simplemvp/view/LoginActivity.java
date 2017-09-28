@@ -29,7 +29,10 @@ public class LoginActivity extends AppCompatActivity implements LoginMvp.View {
         passwordEditText = (EditText) findViewById(R.id.passwordEditText);
         loginButton = (Button) findViewById(R.id.loginButton);
 
-        loginPresenter = new LoginPresenter(this, new SharedPrefManager(getApplicationContext()));
+        if(loginPresenter==null) {
+            loginPresenter = new LoginPresenter(new SharedPrefManager(getApplicationContext()));
+        }
+        loginPresenter.setView(this);
 
         loginButton.setOnClickListener(new View.OnClickListener() {
             @Override

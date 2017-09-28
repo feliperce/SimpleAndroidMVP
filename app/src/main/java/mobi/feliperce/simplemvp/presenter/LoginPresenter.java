@@ -16,8 +16,7 @@ public class LoginPresenter implements LoginMvp.Presenter {
     private LoginMvp.View loginView;
     private LoginActivityModel loginModel;
 
-    public LoginPresenter(LoginMvp.View loginView, SharedPrefManager sharedPrefManager) {
-        this.loginView = loginView;
+    public LoginPresenter(SharedPrefManager sharedPrefManager) {
         this.loginModel = new LoginActivityModel(sharedPrefManager);
     }
 
@@ -44,4 +43,8 @@ public class LoginPresenter implements LoginMvp.Presenter {
         }
     }
 
+    @Override
+    public void setView(LoginMvp.View view) {
+        this.loginView = view;
+    }
 }
