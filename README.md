@@ -1,2 +1,2 @@
 # SimpleAndroidMVP
-Simple MVS sample for Android applications
+Simple MVP sample for Android applications
